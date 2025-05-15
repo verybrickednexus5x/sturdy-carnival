@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indigenous Australian Materials</title>
+    <style>
+        /* Material Design-inspired styles */
+        :root {
+            --primary-color: #795548;
+            --primary-light: #a98274;
+            --primary-dark: #4b2c20;
+            --secondary-color: #4caf50;
+            --text-on-primary: #ffffff;
+            --text-primary: rgba(0, 0, 0, 0.87);
+            --text-secondary: rgba(0, 0, 0, 0.6);
+            --card-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            --elevation-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-primary);
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: var(--text-on-primary);
+            box-shadow: var(--elevation-shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 64px;
+        }
+
+        .site-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: var(--text-on-primary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 84px auto 20px;
+            padding: 0 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 20px;
+            padding: 24px;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-dark);
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--text-on-primary);
+            border: none;
+            border-radius: 4px;
+            padding: 10px 16px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--card-shadow);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            box-shadow: var(--elevation-shadow);
+        }
+
+        /* Grid layout for some sections */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+        }
+
+        /* Page-specific styles */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--text-on-primary);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Helper utility classes */
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-2 {
+            margin-top: 20px;
+        }
+        
+        .mb-2 {
+            margin-bottom: 20px;
+        }
+
+        /* Simple Image Placeholder */
+        .img-placeholder {
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="site-title">Indigenous Australian Materials</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" data-page="home" class="active">Home</a></li>
+                    <li><a href="#" data-page="ochre">Ochre</a></li>
+                    <li><a href="#" data-page="tea-tree">Tea Tree</a></li>
+                    <li><a href="#" data-page="spinifex">Spinifex Resin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="card">
+                <h1>Exploring Elements, Compounds, and Mixtures by Indigenous Australians</h1>
+                <p>Welcome to our presentation on the traditional use of materials by Indigenous Australians. This website explores how Indigenous cultures have utilized various elements, compounds, and mixtures from the natural world for thousands of years.</p>
+                
+                <div class="img-placeholder">
+                    <p>Australian Landscape Image</p>
+                </div>
+                
+                <h2 class="mt-2">Featured Materials</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Ochre</h3>
+                        <p>Natural earth pigments used for art, ceremonies, and protection.</p>
+                        <button class="btn" onclick="showPage('ochre')">Learn More</button>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Tea Tree Oil</h3>
+                        <p>A natural antiseptic compound used for medicinal purposes.</p>
+                        <button class="btn" onclick="showPage('tea-tree')">Learn More</button>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Spinifex Resin</h3>
+                        <p>A natural adhesive used for tool-making and repairs.</p>
+                        <button class="btn" onclick="showPage('spinifex')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ochre Page -->
+        <div id="ochre" class="page">
+            <div class="card">
+                <h1>Ochre</h1>
+                
+                <section>
+                    <h2>What is it?</h2>
+                    <p>Ochre is a natural earth pigment that contains iron oxide, which gives it a range of colors from yellow to deep orange, red, and brown. Chemically, it is primarily composed of iron oxide (Fe₂O₃) mixed with varying amounts of clay and sand. It is one of the earliest known pigments used by humans worldwide.</p>
+                    <div class="img-placeholder">
+                        <p>Ochre Samples Image</p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>How is it found?</h2>
+                    <p>Indigenous Australians locate ochre deposits in specific areas known for their quality and color. These natural deposits are often found in creek beds, cliff faces, and underground seams. The ochre is carefully extracted through digging and gathering, with some high-quality ochre sources being so valuable that they became important trade items between different groups. Different regions across Australia are known for specific colors and qualities of ochre.</p>
+                </section>
+                
+                <section>
+                    <h2>What are its uses?</h2>
+                    <p>Ochre serves multiple important purposes in Indigenous Australian cultures:</p>
+                    <ul>
+                        <li><strong>Ceremonial:</strong> Used for body decoration during important ceremonies and rituals</li>
+                        <li><strong>Art:</strong> A primary pigment in rock art, bark paintings, and other traditional art forms</li>
+                        <li><strong>Medicinal:</strong> Some ochres have antiseptic properties and are used to treat skin conditions</li>
+                        <li><strong>Practical:</strong> Used as a sun protection when mixed with animal fat</li>
+                        <li><strong>Spiritual:</strong> Considered to have protective and spiritual properties</li>
+                    </ul>
+                    <p>The preparation involves grinding the ochre into a fine powder and then mixing it with water, animal fat, or plant resins to create a paint or paste that can be applied to various surfaces or the body.</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Tea Tree Page -->
+        <div id="tea-tree" class="page">
+            <div class="card">
+                <h1>Tea Tree Oil</h1>
+                
+                <section>
+                    <h2>What is it?</h2>
+                    <p>Tea tree oil is an essential oil derived from the leaves of the Melaleuca alternifolia plant, native to Australia. It is a complex mixture of over 100 different compounds, primarily terpenes, with the main active components being terpinen-4-ol and γ-terpinene. These natural compounds give tea tree oil its medicinal properties.</p>
+                    <div class="img-placeholder">
+                        <p>Tea Tree Plant Image</p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>How is it found?</h2>
+                    <p>Indigenous Australians, particularly the Bundjalung people of northeastern New South Wales, gathered leaves from the tea tree plant that grows in swampy, coastal areas. The traditional method of extraction involved crushing the leaves to release the oils and aromatic compounds. The leaves might be used directly or soaked in water to release their medicinal properties.</p>
+                </section>
+                
+                <section>
+                    <h2>What are its uses?</h2>
+                    <p>Tea tree oil has been used by Indigenous Australians for thousands of years as:</p>
+                    <ul>
+                        <li><strong>Medicine:</strong> Applied to treat cuts, wounds, and skin infections due to its natural antiseptic properties</li>
+                        <li><strong>Respiratory treatment:</strong> The leaves were crushed and inhaled to treat coughs and colds</li>
+                        <li><strong>Anti-inflammatory:</strong> Used to reduce swelling and inflammation</li>
+                        <li><strong>Insect repellent:</strong> The strong scent helps keep insects away</li>
+                    </ul>
+                    <p>The knowledge of tea tree's medicinal properties was passed down through generations and is now recognized worldwide, with the oil being used in many modern commercial products.</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Spinifex Page -->
+        <div id="spinifex" class="page">
+            <div class="card">
+                <h1>Spinifex Resin</h1>
+                
+                <section>
+                    <h2>What is it?</h2>
+                    <p>Spinifex resin is a sticky, plant-based adhesive derived from spinifex grass (Triodia species) that grows in arid regions across Australia. Chemically, it is a complex mixture of plant compounds including terpenoids, phenols, and various organic molecules. When processed, it forms a strong natural thermoplastic resin that becomes malleable when heated and hardens when cooled.</p>
+                    <div class="img-placeholder">
+                        <p>Spinifex Grass Image</p>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>How is it found?</h2>
+                    <p>Indigenous Australians collect the resin from spinifex grass in several ways:</p>
+                    <ul>
+                        <li>Harvesting naturally occurring resin globules that form on the grass</li>
+                        <li>Threshing mature spinifex clumps and collecting the resin dust</li>
+                        <li>Using controlled burning to stimulate the grass to exude resin</li>
+                        <li>Collecting resin from ant nests where ants have gathered it</li>
+                    </ul>
+                    <p>After collection, the resin is cleaned of impurities, heated, and processed for use.</p>
+                </section>
+                
+                <section>
+                    <h2>What are its uses?</h2>
+                    <p>Spinifex resin has been used by Indigenous Australians for thousands of years as:</p>
+                    <ul>
+                        <li><strong>Adhesive:</strong> For attaching stone tools to wooden handles and fixing spear points</li>
+                        <li><strong>Waterproofing agent:</strong> For sealing water carriers and wooden vessels</li>
+                        <li><strong>Repair material:</strong> For patching holes in vessels and tools</li>
+                        <li><strong>Medicinal use:</strong> As a treatment for certain ailments when prepared in specific ways</li>
+                        <li><strong>Construction material:</strong> Combined with other materials to build and repair structures</li>
+                    </ul>
+                    <p>Modern research is exploring spinifex resin for new applications, including as a strengthening agent for materials like concrete and as a biodegradable alternative to synthetic plastics.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created for Year 8 Science Project - St Kevin's College - 2025</p>
+    </footer>
+
+    <script>
+        // Simple page navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Add click event to each link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageName = this.getAttribute('data-page');
+                    showPage(pageName);
+                });
+            });
+        });
+        
+        // Function to show a specific page
+        function showPage(pageName) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageName).classList.add('active');
+            
+            // Update active nav link
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageName) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
